@@ -6,18 +6,23 @@ using System.Threading.Tasks;
 
 namespace AmazonLockerService.models
 {
-    public class Order
+    public class Order: BaseEntity
     {
-        public string Id { get; set; }
-        public Package Package { get; set; }
+        //public Package Package { get; set; }
+        public IEnumerable<string> Items { get; set; }
         public User User { get; set; }
         public DateTime OrderDateTime { get; set; }
+        public Locker Locker { get; set; }
 
-        public Order(string id, User user, DateTime orderDateTime)
+        public Order() {}
+
+        public Order(int id, User user, DateTime orderDateTime)
         {
             Id = id;
             User = user;
             OrderDateTime = orderDateTime;
         }
+
+
     }
 }

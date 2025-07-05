@@ -11,6 +11,6 @@ namespace AmazonLockerService.services
     public interface ILockerService
     {
         Locker FindNearByLocker(Location location);
-        Locker AddLocker(string lockerId, Location location);
+        Locker AddLocker(int lockerId, IEnumerable<Slot> slots, Location location);
     }
 }

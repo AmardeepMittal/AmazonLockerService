@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace AmazonLockerService.repository.inMemory
 {
+    //Repositories has be to be singleton to avoid multiple instances of the same repository, so that DBSet is not reinitialized every time.
     public class NotificationRepositoryInMemory : BaseRepository<Notification>, INotificationRepository
     {
-        private static NotificationRepositoryInMemory instance;
+        private static NotificationRepositoryInMemory instance = new NotificationRepositoryInMemory();
 
-        static NotificationRepositoryInMemory() { }
         private NotificationRepositoryInMemory() { }
         public static NotificationRepositoryInMemory Instance { get { return instance; } }
     }

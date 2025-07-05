@@ -13,10 +13,12 @@ namespace AmazonLockerService.services.Impl
     public class LockerServiceImpl : ILockerService
     {
         private readonly ILockerRepository _lockerRepository = LockerRepositoryInMemory.Instance;
-        public Locker AddLocker(string lockerId, Location location)
+        public Locker AddLocker(int lockerId, IEnumerable<Slot> slots, Location location)
         {
-            var locker = new Locker(lockerId, location);
-            return _lockerRepository.Add(lockerId, locker);
+            var locker = new Locker();
+            locker.Location = location;
+            locker.Slots = slots;
+            return _lockerRepository.Add(locker);
         }
 
         public Locker FindNearByLocker(Location location)

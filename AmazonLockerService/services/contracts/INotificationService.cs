@@ -9,6 +9,6 @@ namespace AmazonLockerService.services
 {
     public interface INotificationService
     {
-        bool Notify(User user, int otp, string slotId, Location location);
+        bool Notify(User user, int otp, int slotId, Location location);
     }
 }

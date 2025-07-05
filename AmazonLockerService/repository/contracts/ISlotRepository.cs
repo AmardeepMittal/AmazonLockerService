@@ -10,6 +10,6 @@ namespace AmazonLockerService.repository
     public interface ISlotRepository : IBaseRepository<Slot>
     {
         IEnumerable<Slot> getAvailableSlots();
-        IEnumerable<Slot> getAvailableSlotsByLockerId(string lockerId);
+        IEnumerable<Slot> getAvailableSlotsByLockerId(int lockerId);
     }
 }

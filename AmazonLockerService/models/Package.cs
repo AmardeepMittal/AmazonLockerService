@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace AmazonLockerService.models
 {
-    public class Package
+    public class Package: BaseEntity
     {
-        public string Id { get; set; }
         public Order Order { get; set; }
         public int Code { get; set; }
         public Size Size { get; set; }
@@ -17,9 +16,9 @@ namespace AmazonLockerService.models
         public DeliveryPerson DeliveryPerson { get; set; }
 
 
-        public Package(string id, Size size, Order order, DeliveryPerson person)
+        public Package() { }
+        public Package(Size size, Order order, DeliveryPerson person)
         {
-            Id = id;
             Order = order;
             Size = size;
             DeliveryPerson = person;

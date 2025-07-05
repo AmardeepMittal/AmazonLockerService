@@ -7,17 +7,15 @@ using System.Threading.Tasks;
 
 namespace AmazonLockerService.models
 {
-    public class Slot
+    public class Slot: BaseEntity
     {
-        public string Id { get; set; }
         public Size Size { get; set; }
         public Locker Locker { get; set; }
         public SlotStatus Status { get; set; }
         public DateTime? AllocationDate { get; set; }
-        public Package Package { get; set; }
 
 
-        public Slot(string id, Size size, Locker locker) { 
+        public Slot(int id, Size size, Locker locker) { 
             Id = id;
             Size = size;
             Locker = locker;

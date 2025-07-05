@@ -10,7 +10,8 @@ namespace AmazonLockerService.services.contracts
 {
     public interface IOrderService
     {
-        Order CreateOrder(string id, IEnumerable<string> items, User user, DateTime orderDateTime);
-        void DeliverOrder(string id, DeliveryPerson person, Size size);
+        Order CreateOrder(IEnumerable<string> items, User user, DateTime orderDateTime);
+        void DeliverOrderToLocker(int orderId, DeliveryPerson person);
+        void PickUpOrder(int orderId, int code);
     }
 }

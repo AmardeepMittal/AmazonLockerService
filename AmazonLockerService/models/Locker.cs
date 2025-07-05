@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 
 namespace AmazonLockerService.models
 {
-    public class Locker
+    public class Locker : BaseEntity
     {
-        public string LockerId { get; set; }
         public Location Location { get; set; }
         public IEnumerable<Slot> Slots { get; set; }
 
-        public Locker(string id, Location location) { 
-            LockerId = id;
+        public Locker() { }
+
+        public Locker(int id, Location location) { 
+            Id = id;
             Location = location;
         }
 

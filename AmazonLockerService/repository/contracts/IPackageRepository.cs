@@ -9,5 +9,6 @@ namespace AmazonLockerService.repository
 {
     public interface IPackageRepository : IBaseRepository<Package>
     {
+        Package FindOrderById(int orderId);
     }
 }

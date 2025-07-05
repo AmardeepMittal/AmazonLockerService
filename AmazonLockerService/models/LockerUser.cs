@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace AmazonLockerService.models
 {
-    public class User
+    public class User: BaseEntity
     {
-        public string Id { get; set; }
         public string Name { get; set; }
         public Contact Contact { get; set; }
         public Location Location { get; set; }
 
-        public User(string id, string name, Contact contact, Location location)
+        public User(int id, string name, Contact contact, Location location)
         {
             Id = id;
             Name = name;
@@ -23,9 +22,9 @@ namespace AmazonLockerService.models
     }
 
     public class Client : User {
-        public Client(string id, string name, Contact contact, Location location) : base(id, name, contact, location) { }
+        public Client(int id, string name, Contact contact, Location location) : base(id, name, contact, location) { }
     }
     public class DeliveryPerson : User {
-        public DeliveryPerson(string id, string name, Contact contact, Location location) : base(id, name, contact, location) { }
+        public DeliveryPerson(int id, string name, Contact contact, Location location) : base(id, name, contact, location) { }
     }
 }

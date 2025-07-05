@@ -9,8 +9,7 @@ namespace AmazonLockerService.services.contracts
 {
     public interface ISlotService
     {
-        IEnumerable<Slot> getAvailableSlots();
-        Slot addPackageToSlot(string lockerId, Package package);
-        void pickUpPackage(string slotId, string packageId, int code);
+        Slot addPackageToSlot(int lockerId, Package package);
+        void RemovePackageFromSlot(int slotId);
     }
 }
