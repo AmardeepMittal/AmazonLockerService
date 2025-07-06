@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Enum\Size.cs" />
     <Compile Include="Enum\SlotStatus.cs" />
+    <Compile Include="models\BaseEntity.cs" />
     <Compile Include="models\Contact.cs" />
     <Compile Include="models\Location.cs" />
     <Compile Include="models\LockerUser.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="strategy\SlotAssignmentStrategy.cs" />
     <Compile Include="strategy\SlotFilterStrategy.cs" />
     <Compile Include="strategy\OtpGenerator.cs" />
+    <Compile Include="util\IDGenerator.cs" />
     <Compile Include="util\LocationUtil.cs" />
   </ItemGroup>
   <ItemGroup>

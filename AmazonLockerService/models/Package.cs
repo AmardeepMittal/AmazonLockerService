@@ -14,7 +14,7 @@ namespace AmazonLockerService.models
         public Size Size { get; set; }
         public IEnumerable<string> Items { get; set; }
         public DeliveryPerson DeliveryPerson { get; set; }
-
+        public Slot Slot { get; internal set; }
 
         public Package() { }
         public Package(Size size, Order order, DeliveryPerson person)
